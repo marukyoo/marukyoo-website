@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社丸共岡崎商店</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #34495e;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #2c3e50;
+    }
+    section {
+      padding: 2rem;
+    }
+    .product {
+      background-color: #ecf0f1;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    form {
+      background-color: #ecf0f1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #1a242f;
+    }
+    footer {
+      text-align: center;
+      background-color: #bdc3c7;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>株式会社丸共岡崎商店</h1>
+    <p>― Marukyookazakishouten ―</p>
+  </header>
+  <nav>
+    <a href="#about">会社紹介</a>
+    <a href="#products">取扱い商品</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+  
+  <section id="about">
+    <h2>会社紹介</h2>
+    <p>
+      株式会社丸共岡崎商店は、四季をとおして温暖な気候に恵まれた、富士山を望む静岡県静岡市清水区を拠点とし、たけのこの市場出荷・水煮加工、
+      キウイフルーツや温州みかん等の柑橘類の集荷・出荷・販売を行っています。
+    </p>
+    <p>
+      2020年より株式会社金澤四郎商店とグループ会社となり、青森県産のながいも・ごぼうの取り扱いも開始。
+      両社の技術を生かし、新たなニーズへの対応と販路拡大に取り組んでいます。
+    </p>
+  </section>
+
+  <section id="products">
+    <h2>取扱い商品</h2>
+    <div class="product">
+      <h3>みかん　12月頃～2月頃・甘夏や雑柑類　2月以降</h3>
+      <p>温州みかんや甘夏など雑柑類も各種扱っています。直売実施していない時もあるため、事前確認をお願いいたします。</p>
+    </div>
+    <div class="product">
+      <h3>たけのこ　3月末～4月末</h3>
+      <p>地元の生産農家様から朝掘ったたけのこを仕入れ、即日市場へ直送します。</p>
+    </div>
+    <div class="product">
+      <h3>キウイフルーツ　2月頃</h3>
+      <p>静岡県産を中心に多方面のキウイをトレーやパック詰で出荷しています。</p>
+    </div>
+    <div class="product">
+      <h3>たけのこ加工　7月以降</h3>
+      <p>朝掘りたけのこをその日のうちに茹でたものを使用し加工しています。</p>
+    </div>
+    <div class="product">
+      <h3>ながいも（青森県産）通年の取り扱い</h3>
+      <p>粘りが強く、色白でアクが少ないのが特徴。用途に応じた規格でご提案可能です。</p>
+    </div>
+    <div class="product">
+      <h3>ごぼう（青森県産）通年の取り扱い</h3>
+      <p>香りと歯ごたえの良いごぼうです。ニーズに応じた様々な規格をご用意しています。</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <form action="mailto:marukyookazaki@gmail.com" method="post" enctype="text/plain">
+      <label for="name">お名前：</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">メールアドレス：</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">お問い合わせ内容：</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">送信</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 株式会社丸共岡崎商店</p>
+  </footer>
+</body>
+</html>
