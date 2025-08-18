@@ -143,19 +143,39 @@
 
   <section id="contact">
     <h2>お問い合わせ</h2>
+    <p>送信できない場合は、初回のみ <strong>Formsubmit の送信許可メール</strong> の承認が必要です（下の「原因と対処」を参照）。</p>
     <form action="https://formsubmit.co/marukyookazaki@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="https://marukyoo.github.io/marukyoo-website/thanks.html">
+      <!-- 推奨の隠し項目（安全＆利便性） -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="【丸共岡崎商店】Webフォームからのお問い合わせ">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://marukyoo.github.io/marukyoo-website/#thanks">
+      <input type="text" name="_honey" style="display:none">
+
       <label for="name">お名前：</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" autocomplete="name" required>
 
       <label for="email">メールアドレス：</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" autocomplete="email" required>
 
       <label for="message">お問い合わせ内容：</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit">送信</button>
     </form>
+
+    <div class="note">
+      <h3 style="margin-top:1.25rem; font-size:1rem;">送信できない場合の原因と対処</h3>
+      <ol style="padding-left:1.2rem;">
+        <li>初回のみ、<strong>Formsubmit</strong> から <code>marukyookazaki@gmail.com</code> 宛に「確認メール」が届きます。メール内の <strong>Verify</strong> ボタンをクリックして承認してください（未承認だと送信がブロックされます）。</li>
+        <li>このページのURLが <code>https://</code> で始まっているか確認（GitHub Pages はOK）。</li>
+        <li>送信後に <code>#thanks</code> に自動スクロールします（ページ下部の完了メッセージ）。</li>
+      </ol>
+    </div>
+
+    <div id="thanks" class="note" aria-live="polite" style="margin-top:1.25rem;">
+      送信ありがとうございました。内容を確認のうえ、担当よりご連絡いたします。
+    </div>
   </section>
 
   <footer>
